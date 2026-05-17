@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bleibt neugierig. — PMS Kreuzlingen</title>
+
+  <meta
+    name="description"
+    content="Inside Marketing GmbH gratuliert den Absolventinnen und Absolventen der PMS Kreuzlingen."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --bg: #0C212E;
+      --white-soft: #f4efe7;
+      --gold-soft: #8C7E70;
+      --muted: rgba(244,239,231,0.68);
+      --accent: #E57B3C;
+      --line: rgba(244,239,231,0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--white-soft);
+      font-family: "Montserrat", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      padding: 56px 56px 0;
+      overflow: hidden;
+    }
+
+    .grid {
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+      background-size: 48px 48px;
+
+      mask-image: linear-gradient(to bottom, black, transparent 94%);
+
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .background-logo {
+      position: absolute;
+
+      width: 1200px;
+      height: 1200px;
+
+      top: 46%;
+      right: -320px;
+
+      opacity: 0.07;
+
+      z-index: 1;
+
+      pointer-events: none;
+
+      filter:
+        drop-shadow(0 0 60px rgba(229,123,60,0.18));
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: flex-end;
+
+      margin-bottom: 72px;
+    }
+
+    .edition {
+      font-size: 12px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      color: var(--gold-soft);
+    }
+
+    .hero {
+      margin-bottom: 120px;
+    }
+
+    h1 {
+      margin: 0;
+
+      font-size: clamp(76px, 13vw, 220px);
+
+      line-height: 0.86;
+
+      letter-spacing: -0.075em;
+
+      text-transform: uppercase;
+
+      font-weight: 900;
+    }
+
+    .hero-white {
+      color: var(--white-soft);
+    }
+
+    .hero-gold {
+      color: var(--gold-soft);
+    }
+
+    .hero-dot {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      margin-top: 34px;
+
+      max-width: 760px;
+
+      font-size: clamp(22px, 2vw, 34px);
+
+      line-height: 1.35;
+
+      letter-spacing: -0.04em;
+
+      font-weight: 300;
+
+      color: rgba(244,239,231,0.84);
+    }
+
+    .hero-sub strong {
+      font-weight: 500;
+      color: var(--white-soft);
+    }
+
+    .intro-line {
+      margin-top: 26px;
+
+      width: 120px;
+      height: 2px;
+
+      background: var(--accent);
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 34px;
+
+      padding-bottom: 120px;
+    }
+
+    .section {
+      padding-top: 28px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .section-number {
+      margin-bottom: 22px;
+
+      font-size: 13px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      color: var(--accent);
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+
+      font-size: 30px;
+
+      line-height: 1.05;
+
+      letter-spacing: -0.05em;
+
+      font-weight: 800;
+
+      color: var(--white-soft);
+    }
+
+    .section-copy {
+      margin-bottom: 28px;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      letter-spacing: -0.02em;
+
+      font-weight: 300;
+
+      color: rgba(244,239,231,0.72);
+    }
+
+    .section a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      color: var(--gold-soft);
+
+      text-decoration: none;
+
+      font-size: 16px;
+
+      line-height: 1.35;
+
+      font-weight: 500;
+
+      letter-spacing: -0.02em;
+
+      transition: 0.2s ease;
+    }
+
+    .section a:hover {
+      color: var(--white-soft);
+
+      transform: translateX(4px);
+    }
+
+    .footer-panel {
+      position: relative;
+      z-index: 2;
+
+      margin: 0 -56px;
+
+      background: var(--white-soft);
+
+      color: var(--bg);
+
+      padding: 56px;
+    }
+
+    .footer-inner {
+      width: min(1120px, 100%);
+
+      margin: 0 auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 56px;
+    }
+
+    .footer-brand {
+      max-width: 240px;
+
+      flex-shrink: 0;
+    }
+
+    .footer-logo {
+      width: 110px;
+
+      height: auto;
+
+      display: block;
+
+      margin-bottom: 18px;
+    }
+
+    .footer-address {
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      letter-spacing: -0.01em;
+
+      font-weight: 300;
+
+      color: rgba(12,33,46,0.68);
+    }
+
+    .footer-content {
+      flex: 1;
+    }
+
+    .footer-copy {
+      max-width: 680px;
+
+      font-size: clamp(22px, 2.1vw, 32px);
+
+      line-height: 1.35;
+
+      letter-spacing: -0.045em;
+
+      font-weight: 300;
+
+      color: var(--bg);
+
+      text-transform: none;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+
+      letter-spacing: -0.02em;
+
+      font-weight: 300;
+
+      color: rgba(12,33,46,0.72);
+    }
+
+    .footer-note-right {
+      text-align: right;
+    }
+
+    .footer-note a {
+      color: inherit;
+
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 980px) {
+
+      .page {
+        padding: 32px 32px 0;
+      }
+
+      .sections {
+        grid-template-columns: 1fr;
+
+        padding-bottom: 84px;
+      }
+
+      .hero {
+        margin-bottom: 84px;
+      }
+
+      .background-logo {
+        width: 820px;
+        height: 820px;
+
+        right: -260px;
+      }
+
+      .footer-panel {
+        margin: 0 -32px;
+
+        padding: 44px 32px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 34px;
+      }
+
+      .footer-logo {
+        width: 96px;
+      }
+
+      .footer-note-right {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .page {
+        padding: 24px 24px 0;
+      }
+
+      .topline {
+        justify-content: flex-start;
+
+        margin-bottom: 56px;
+      }
+
+      .hero-sub {
+        font-size: 22px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .background-logo {
+        width: 620px;
+        height: 620px;
+
+        right: -260px;
+
+        opacity: 0.06;
+      }
+
+      .footer-panel {
+        margin: 0 -24px;
+
+        padding: 38px 24px;
+      }
+
+      .footer-logo {
+        width: 82px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="grid"></div>
+
+    <img
+      class="background-logo"
+      src="./assets/logo.svg"
+      alt=""
+    >
+
+    <div class="container">
+
+      <div class="topline">
+
+        <div class="edition">
+          PMS Kreuzlingen 2026
+        </div>
+
+      </div>
+
+      <section class="hero">
+
+        <h1>
+          <span class="hero-white">Bleibt</span><br>
+
+          <span class="hero-gold">
+            neugierig<span class="hero-dot">.</span>
+          </span>
+        </h1>
+
+        <div class="hero-sub">
+
+          Die besten Ideen entstehen selten im Lehrplan.
+          <strong>Und die spannendsten Wege selten nach Plan.</strong>
+
+        </div>
+
+        <div class="intro-line"></div>
+
+      </section>
+
+      <section class="sections">
+
+        <article class="section">
+
+          <div class="section-number">
+            01
+          </div>
+
+          <div class="section-title">
+            Dinge,<br>
+            die den Blick verändern
+          </div>
+
+          <div class="section-copy">
+
+            Manche Gedanken bleiben jahrelang hängen.
+            Nicht weil sie laut sind —
+            sondern weil sie plötzlich etwas verständlich machen.
+
+          </div>
+
+          <a
+            href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity/transcript?language=de"
+            target="_blank"
+            rel="noopener"
+          >
+            Ken Robinson — Do schools kill creativity? →
+          </a>
+
+        </article>
+
+        <article class="section">
+
+          <div class="section-number">
+            02
+          </div>
+
+          <div class="section-title">
+            Anders<br>
+            denken
+          </div>
+
+          <div class="section-copy">
+
+            Kreativität beginnt oft dort,
+            wo man aufhört,
+            alles gleich zu denken.
+
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=FrOglNwFTcM"
+            target="_blank"
+            rel="noopener"
+          >
+            Vera F. Birkenbihl — Einfacher Probleme lösen →
+          </a>
+
+        </article>
+
+        <article class="section">
+
+          <div class="section-number">
+            03
+          </div>
+
+          <div class="section-title">
+            Kreativität<br>
+            entsteht unterwegs
+          </div>
+
+          <div class="section-copy">
+
+            Gute Ideen entstehen selten plötzlich.
+            Meist entstehen sie, wenn man Dinge verbindet,
+            die vorher nichts miteinander zu tun hatten.
+
+          </div>
+
+          <a
+            href="https://www.ted.com/talks/jiri_scherer_decoding_creativity"
+            target="_blank"
+            rel="noopener"
+          >
+            Jiri Scherer — Decoding Creativity →
+          </a>
+
+        </article>
+
+      </section>
+
+    </div>
+
+    <footer class="footer-panel">
+
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+
+          <img
+            class="footer-logo"
+            src="./assets/logo-mark.svg"
+            alt="Inside Marketing GmbH"
+          >
+
+          <div class="footer-address">
+            Inside Marketing GmbH<br>
+            Tannhalde 2<br>
+            CH-9545 Wängi
+          </div>
+
+        </div>
+
+        <div class="footer-content">
+
+          <div class="footer-copy">
+            Herzliche Gratulation allen Absolventinnen und Absolventen der PMS Kreuzlingen.
+          </div>
+
+          <div class="footer-note footer-note-right">
+
+            <a
+              href="https://www.insidemarketing.ch"
+              target="_blank"
+              rel="noopener"
+            >
+              insidemarketing.ch
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
