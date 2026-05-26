@@ -180,6 +180,11 @@
         }
 
         .section {
+            display: flex;
+            flex-direction: column;
+
+            min-height: 100%;
+
             padding-top: 28px;
 
             border-top: 1px solid var(--line);
@@ -224,30 +229,83 @@
             color: rgba(244, 239, 231, 0.72);
         }
 
-        .section a {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
+        .video-link {
+            margin-top: auto;
+
+            padding-top: 22px;
+
+            border-top: 1px solid rgba(244, 239, 231, 0.09);
+
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
 
             color: var(--gold-soft);
 
             text-decoration: none;
 
+            transition: 0.2s ease;
+        }
+
+        .video-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 12px;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+
+            font-weight: 800;
+
+            color: var(--accent);
+        }
+
+        .play-dot {
+            width: 22px;
+            height: 22px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(229, 123, 60, 0.7);
+
+            border-radius: 999px;
+
+            font-size: 9px;
+            line-height: 1;
+
+            color: var(--accent);
+        }
+
+        .video-title {
             font-size: 16px;
 
-            line-height: 1.35;
+            line-height: 1.45;
 
             font-weight: 500;
 
             letter-spacing: -0.02em;
 
+            color: var(--gold-soft);
+
             transition: 0.2s ease;
         }
 
-        .section a:hover {
-            color: var(--white-soft);
-
+        .video-link:hover {
             transform: translateX(4px);
+        }
+
+        .video-link:hover .video-title {
+            color: var(--white-soft);
+        }
+
+        .video-link:hover .play-dot {
+            background: var(--accent);
+            color: var(--bg);
         }
 
         .footer-panel {
@@ -509,9 +567,20 @@
 
                     </div>
 
-                    <a href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity/transcript?language=de"
-                        target="_blank" rel="noopener">
-                        Ken Robinson — Do schools kill creativity? →
+                    <a
+                        class="video-link"
+                        href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity/transcript?language=de"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <span class="video-label">
+                            <span class="play-dot">▶</span>
+                            Video ansehen
+                        </span>
+
+                        <span class="video-title">
+                            Ken Robinson — Do schools kill creativity?
+                        </span>
                     </a>
 
                 </article>
@@ -535,8 +604,20 @@
 
                     </div>
 
-                    <a href="https://www.youtube.com/watch?v=FrOglNwFTcM" target="_blank" rel="noopener">
-                        Vera F. Birkenbihl — Einfacher Probleme lösen →
+                    <a
+                        class="video-link"
+                        href="https://www.youtube.com/watch?v=FrOglNwFTcM"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <span class="video-label">
+                            <span class="play-dot">▶</span>
+                            Video ansehen
+                        </span>
+
+                        <span class="video-title">
+                            Vera F. Birkenbihl — Einfacher Probleme lösen
+                        </span>
                     </a>
 
                 </article>
@@ -560,8 +641,20 @@
 
                     </div>
 
-                    <a href="https://www.ted.com/talks/jiri_scherer_decoding_creativity" target="_blank" rel="noopener">
-                        Jiri Scherer — Decoding Creativity →
+                    <a
+                        class="video-link"
+                        href="https://www.ted.com/talks/jiri_scherer_decoding_creativity"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <span class="video-label">
+                            <span class="play-dot">▶</span>
+                            Video ansehen
+                        </span>
+
+                        <span class="video-title">
+                            Jiri Scherer — Decoding Creativity
+                        </span>
                     </a>
 
                 </article>
