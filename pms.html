@@ -180,12 +180,8 @@
         }
 
         .section {
-            display: flex;
-            flex-direction: column;
-
-            min-height: 100%;
-
-            gap: 0;
+            display: grid;
+            grid-template-rows: 38px 92px 170px auto;
 
             padding-top: 28px;
 
@@ -204,7 +200,7 @@
         }
 
         .section-title {
-            margin-bottom: 18px;
+            margin-bottom: 0;
 
             font-size: 30px;
 
@@ -218,9 +214,7 @@
         }
 
         .section-copy {
-            flex: 1;
-
-            margin-bottom: 34px;
+            margin-bottom: 0;
 
             font-size: 17px;
 
@@ -233,36 +227,26 @@
             color: rgba(244, 239, 231, 0.72);
         }
 
-        .section:nth-child(2) .section-copy {
-            margin-bottom: 68px;
-        }
-
         .video-link {
-            margin-top: auto;
+            display: block;
 
-            padding-top: 22px;
+            padding-top: 28px;
 
-            border-top: 1px solid rgba(244, 239, 231, 0.09);
-
-            display: flex;
-            flex-direction: column;
-            gap: 9px;
-
-            color: var(--gold-soft);
+            border-top: 1px solid rgba(244, 239, 231, 0.12);
 
             text-decoration: none;
-
-            transition: 0.2s ease;
         }
 
-        .video-label {
-            display: inline-flex;
+        .video-link-label {
+            display: flex;
             align-items: center;
             gap: 10px;
 
+            margin-bottom: 14px;
+
             font-size: 12px;
 
-            letter-spacing: 0.18em;
+            letter-spacing: 0.22em;
 
             text-transform: uppercase;
 
@@ -271,25 +255,26 @@
             color: var(--accent);
         }
 
-        .play-dot {
-            width: 22px;
-            height: 22px;
+        .video-link-icon {
+            width: 28px;
+            height: 28px;
 
-            display: inline-flex;
+            border-radius: 50%;
+
+            border: 1px solid rgba(229, 123, 60, 0.6);
+
+            display: flex;
             align-items: center;
             justify-content: center;
 
-            border: 1px solid rgba(229, 123, 60, 0.7);
+            font-size: 11px;
 
-            border-radius: 999px;
-
-            font-size: 9px;
-            line-height: 1;
-
-            color: var(--accent);
+            flex-shrink: 0;
         }
 
-        .video-title {
+        .video-link-title {
+            color: var(--gold-soft);
+
             font-size: 16px;
 
             line-height: 1.45;
@@ -298,22 +283,11 @@
 
             letter-spacing: -0.02em;
 
-            color: var(--gold-soft);
-
             transition: 0.2s ease;
         }
 
-        .video-link:hover {
-            transform: translateX(4px);
-        }
-
-        .video-link:hover .video-title {
+        .video-link:hover .video-link-title {
             color: var(--white-soft);
-        }
-
-        .video-link:hover .play-dot {
-            background: var(--accent);
-            color: var(--bg);
         }
 
         .footer-panel {
@@ -429,6 +403,10 @@
                 grid-template-columns: 1fr;
 
                 padding-bottom: 84px;
+            }
+
+            .section {
+                grid-template-rows: auto;
             }
 
             .hero {
@@ -578,14 +556,16 @@
                     <a class="video-link"
                         href="https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity/transcript?language=de"
                         target="_blank" rel="noopener">
-                        <span class="video-label">
-                            <span class="play-dot">▶</span>
-                            Video ansehen
-                        </span>
 
-                        <span class="video-title">
+                        <div class="video-link-label">
+                            <div class="video-link-icon">▶</div>
+                            VIDEO ANSEHEN
+                        </div>
+
+                        <div class="video-link-title">
                             Ken Robinson — Do schools kill creativity?
-                        </span>
+                        </div>
+
                     </a>
 
                 </article>
@@ -609,16 +589,19 @@
 
                     </div>
 
-                    <a class="video-link" href="https://www.youtube.com/watch?v=FrOglNwFTcM" target="_blank"
-                        rel="noopener">
-                        <span class="video-label">
-                            <span class="play-dot">▶</span>
-                            Video ansehen
-                        </span>
+                    <a class="video-link"
+                        href="https://www.youtube.com/watch?v=FrOglNwFTcM"
+                        target="_blank" rel="noopener">
 
-                        <span class="video-title">
+                        <div class="video-link-label">
+                            <div class="video-link-icon">▶</div>
+                            VIDEO ANSEHEN
+                        </div>
+
+                        <div class="video-link-title">
                             Vera F. Birkenbihl — Einfacher Probleme lösen
-                        </span>
+                        </div>
+
                     </a>
 
                 </article>
@@ -642,16 +625,19 @@
 
                     </div>
 
-                    <a class="video-link" href="https://www.ted.com/talks/jiri_scherer_decoding_creativity"
+                    <a class="video-link"
+                        href="https://www.ted.com/talks/jiri_scherer_decoding_creativity"
                         target="_blank" rel="noopener">
-                        <span class="video-label">
-                            <span class="play-dot">▶</span>
-                            Video ansehen
-                        </span>
 
-                        <span class="video-title">
+                        <div class="video-link-label">
+                            <div class="video-link-icon">▶</div>
+                            VIDEO ANSEHEN
+                        </div>
+
+                        <div class="video-link-title">
                             Jiri Scherer — Decoding Creativity
-                        </span>
+                        </div>
+
                     </a>
 
                 </article>
